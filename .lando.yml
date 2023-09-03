@@ -1,0 +1,4 @@
+name: laragigs
+recipe: laravel
+config:
+  webroot: app/public
