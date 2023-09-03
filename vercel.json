@@ -12,7 +12,6 @@
   }],
   "env": {
     "APP_ENV": "production",
-    "APP_KEY": "",
     "APP_DEBUG": "true",
     "APP_URL": "https://laragigs-ten.com",
     "APP_CONFIG_CACHE": "/tmp/config.php",
