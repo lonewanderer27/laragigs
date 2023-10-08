@@ -13,9 +13,35 @@ class ListingFactory extends Factory
      */
     public function definition()
     {
+        // list of all frontend frameworks
+        $frontendFrameworks = [
+            'React',
+            'Angular',
+            'Vue.js',
+            'Ember.js',
+            'Backbone.js',
+            'Bootstrap',
+            'Foundation',
+            'Materialize',
+            'Semantic UI',
+            'Bulma',
+            'Tailwind CSS',
+        ];
+        // backend or frontend
+        $choice = rand(1,2);
+
+        // randomly choose the frontend framework
+        // then concat it to a new tag
+        $tags = '';
+        if ($choice == 1) {
+            $tags = "laravel, " . $this->faker->randomElement($frontendFrameworks) . "frontend";
+        } else {
+            $tags = "laravel, api, backend";
+        }
+
         return [
             'title' => $this->faker->sentence(),
-            'tags' => "laravel, api, backend",
+            'tags' => $tags,
             'company' => $this->faker->company(),
             'email' => $this->faker->companyEmail(),
             'website' => $this->faker->url(),
