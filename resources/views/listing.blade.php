@@ -1,11 +1,13 @@
-<head>
-  <title>{{$listing['title']}}</title>
-</head>
+@extends('layout')
 
-<h1>
-  {{$listing['title']}}
-</h1>
+@section("content")
 
-<p>
-  {{$listing['description']}}
-</p>
+  <h1>
+    {{$listing['title']}}
+  </h1>
+
+  <p>
+    {{$listing['description']}}
+  </p>
+
+@endsection
