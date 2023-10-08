@@ -23,3 +23,17 @@ Route::get('/test', function () {
         'message' => 'Hello World!',
     ], 200);
 });
+
+Route::get('/search', function (Request $request) {
+    dd($request);
+});
+
+Route::get('/posts', function () {
+    return response()->json([
+        'posts' => [
+            'title' => 'Post One',
+            'title2' => 'Post Two',
+            'title3' => 'Post Three',
+        ]
+    ], 201);
+});
