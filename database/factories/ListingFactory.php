@@ -34,7 +34,7 @@ class ListingFactory extends Factory
         // then concat it to a new tag
         $tags = '';
         if ($choice == 1) {
-            $tags = "laravel, " . $this->faker->randomElement($frontendFrameworks) . "frontend";
+            $tags = "laravel, " . $this->faker->randomElement($frontendFrameworks) . ", frontend";
         } else {
             $tags = "laravel, api, backend";
         }
