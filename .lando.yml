@@ -2,3 +2,6 @@ name: laragigs
 recipe: laravel
 config:
   webroot: public
+services:
+  phpmyadmin:
+    type: phpmyadmin
