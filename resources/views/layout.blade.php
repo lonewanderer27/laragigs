@@ -21,6 +21,7 @@
             },
         };
     </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>LaraGigs | Find Laravel Jobs & Projects</title>
 </head>
 
@@ -50,6 +51,8 @@
 
         <a href="/listings/create" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Post Job</a>
     </footer>
+
+    <x-flash-message/>
 </body>
 
 </html>
