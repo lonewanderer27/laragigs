@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Listing;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,8 +15,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(10)->create();
+        // create a single user
+        $user = User::factory()->create([
+            'name' => 'John Doe',
+            'email' => 'john.doe@gmail.com'
+        ]);
 
-        Listing::factory(10)->create();
+        // associate listings with that  user
+        Listing::factory(10)->create([
+            'user_id' => $user->id 
+        ]);
     }
 }
